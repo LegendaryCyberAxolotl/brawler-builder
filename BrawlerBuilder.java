@@ -5,7 +5,7 @@ public class BrawlerBuilder {
     private String[] gadgets;
     private String[] gears;
     private String[] star_powers;
-    private String hupercharge;
+    private String hypercharge;
     private String[] traits;
 
     public BrawlerBuilder name(String name) {
@@ -39,7 +39,7 @@ public class BrawlerBuilder {
     }
 
     public BrawlerBuilder hypercharge(String hypercharge) {
-        this.hupercharge = hypercharge;
+        this.hypercharge = hypercharge;
         return this;
     }
 
@@ -78,6 +78,6 @@ public class BrawlerBuilder {
             throw new IllegalArgumentException("Star powers cannot be null and must have exactly 2 elements");
         }
 
-        return new Brawler(name, base_attack, super_attack, gadgets, gears, star_powers, hupercharge, buffies, traits);
+        return new Brawler(name, base_attack, super_attack, gadgets, gears, star_powers, hypercharge, buffies, traits);
     }
 }
