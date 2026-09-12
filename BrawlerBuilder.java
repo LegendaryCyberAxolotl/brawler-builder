@@ -6,7 +6,11 @@ public class BrawlerBuilder {
     private String[] gears;
     private String[] star_powers;
     private String hypercharge;
+    private String[] buffies;
     private String[] traits;
+    private final int MAX_GADGETS = 2;
+    private final int MAX_GEARS = 6;
+    private final int MAX_STAR_POWERS = 2;
 
     public BrawlerBuilder name(String name) {
         this.name = name;
@@ -54,28 +58,28 @@ public class BrawlerBuilder {
     }
 
     public Brawler build() {
-        if (name is null || name.isBlank()) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name cannot be null or blank");
         }
 
-        if (base_attack is null || base_attack.length == 0) {
+        if (base_attack == null || base_attack.length == 0) {
             throw new IllegalArgumentException("Base attack cannot be null or empty");
         }
 
-        if (super_attack is null || super_attack.length == 0) {
+        if (super_attack == null || super_attack.length == 0) {
             throw new IllegalArgumentException("Super attack cannot be null or empty");
         }
 
-        if (gadgets is null || gadgets.length != 2) {
-            throw new IllegalArgumentException("Gadgets cannot be null and must have exactly 2 elements");
+        if (gadgets == null || gadgets.length != MAX_GADGETS) {
+            throw new IllegalArgumentException("Gadgets cannot be null and must have exactly " + MAX_GADGETS + " elements");
         }
 
-        if (gears is null || gears.length != 6) {
-            throw new IllegalArgumentException("Gears cannot be null and must have exactly 6 elements");
+        if (gears == null || gears.length != MAX_GEARS) {
+            throw new IllegalArgumentException("Gears cannot be null and must have exactly " + MAX_GEARS + " elements");
         }
 
-        if (star_powers is null || star_powers.length != 2) {
-            throw new IllegalArgumentException("Star powers cannot be null and must have exactly 2 elements");
+        if (star_powers == null || star_powers.length != MAX_STAR_POWERS) {
+            throw new IllegalArgumentException("Star powers cannot be null and must have exactly " + MAX_STAR_POWERS + " elements");
         }
 
         return new Brawler(name, base_attack, super_attack, gadgets, gears, star_powers, hypercharge, buffies, traits);

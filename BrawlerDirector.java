@@ -13,7 +13,8 @@ public class BrawlerDirector {
                 .gears(new String[]{"Speed", "Vision", "Health", "Shield", "Damage", "Gadget Cooldown"})
                 .star_powers(new String[]{"Shell Shock", "Band-Aid"})
                 .hypercharge("Double Barrel")
-                .buffies(new String[]{"Gadget Buffie", "Starr Buffie", "Hyper Buffie"});
+                .buffies(new String[]{"Gadget Buffie", "Starr Buffie", "Hyper Buffie"})
+                .build();
     }
 
     public Brawler constructBull() {
@@ -25,7 +26,8 @@ public class BrawlerDirector {
                 .star_powers(new String[]{"Berserker", "Tough Guy"})
                 .hypercharge("Jaws of Steel")
                 .buffies(new String[]{"Gadget Buffie", "Starr Buffie", "Hyper Buffie"})
-                .traits(new String[]{"Tank Trait"});
+                .traits(new String[]{"Tank Trait"})
+                .build();
     }
 
     public Brawler constructCosmo() {
@@ -34,6 +36,7 @@ public class BrawlerDirector {
                 .super_attack(new String[]{"Gravitational Pull"})
                 .gadgets(new String[]{"Planetary Pushback", "Telescope Trap"})
                 .gears(new String[]{"Speed", "Vision", "Health", "Shield", "Damage", "Gadget Cooldown"})
-                .star_powers(new String[]{"Precession", "Ammo Attraction"});
+                .star_powers(new String[]{"Precession", "Ammo Attraction"})
+                .build();
     }
 }
